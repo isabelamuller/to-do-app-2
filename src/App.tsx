@@ -17,6 +17,7 @@ const App = () => {
   return (
     <InterfaceContent>
       <Title />
+      mEU DEUS EU ESTOU CORINGANDO
       <Input/>
     </InterfaceContent>
 
