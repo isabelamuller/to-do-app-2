@@ -1,10 +1,10 @@
 import './App.css';
-import Page1 from './view/Page1';
+import TodoPage from './view/TodoPage';
 
 const App = () => {
 
   return (
-    <Page1/>
+    <TodoPage/>
   )
 }
 

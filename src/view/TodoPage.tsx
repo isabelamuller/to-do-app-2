@@ -3,7 +3,7 @@ import { InterfaceContent } from './styles';
 import Title from '../Components/Title';
 import Input from '../Components/Input';
 
-const Page1 = () => {
+const TodoPage = () => {
 
   return (
     <InterfaceContent>
@@ -14,4 +14,4 @@ const Page1 = () => {
   )
 }
 
-export default Page1;
+export default TodoPage;
