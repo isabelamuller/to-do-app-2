@@ -1,12 +1,11 @@
-import React from 'react';
 import './App.css';
+import TodoPage from './view/TodoPage';
 
-function App() {
+const App = () => {
+
   return (
-    <div className="App">
-      
-    </div>
-  );
+    <TodoPage/>
+  )
 }
 
 export default App;
