@@ -1,12 +1,26 @@
 import React from 'react';
 import './App.css';
+import Title from './Components/Title';
+import styled from "styled-components";
+import Input from './Components/Input';
 
-function App() {
+const InterfaceContent = styled.div`
+  height:85vh;
+  display:block;
+  width: 60rem;
+  border: 1px solid black;
+  padding: 1rem 1rem 1rem 1rem;
+`
+
+const App = () => {
+
   return (
-    <div className="App">
-      
-    </div>
-  );
+    <InterfaceContent>
+      <Title />
+      <Input/>
+    </InterfaceContent>
+
+  )
 }
 
 export default App;
