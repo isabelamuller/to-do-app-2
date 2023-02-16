@@ -1,6 +1,7 @@
 body{
   margin:0;
-  background-color: #FAF9F6;
+  background-color: #fef8fd;
+  /* color:#f7edf2; */
   display: flex;
   justify-content: center;
   top:0;

@@ -1,14 +1,16 @@
 import React from "react";
 import Button from "../Button";
 import { Container, InputStyle } from "./styles";
+import { IInput } from "./types";
 
+const Input: React.FC<IInput> = ({ handleSubmit, todo, setTodo }) => {
 
-const Input: React.FC = () => {
-    
     return (
         <Container>
-        <InputStyle placeholder="Enter a task"/>
-            <Button name='Add task' />
+            <form onSubmit={handleSubmit}>
+                <InputStyle type="input" placeholder="Enter a task" value={todo} onChange={(e) => setTodo(e.target.value)} />
+                <Button name='Add task' />
+            </form>
         </Container>
     )
 }

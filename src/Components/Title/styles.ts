@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const TitleStyle = styled.h1`
-color:#A0E7E5;
+color:#ee566d;
 cursor: default;
 display:flex;
 justify-content:center;
