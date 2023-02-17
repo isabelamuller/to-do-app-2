@@ -1,18 +1,5 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-  width: 58rem;
-  height: 68vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #f7edf2;
-  border-radius: 8px;
-  margin-top: 2rem;
-  margin-right: 1rem;
-  margin-left: 1rem;
-`;
-
 export const CardStyle = styled.div`
   background-color: white;
   border-radius: 8px;

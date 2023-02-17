@@ -6,3 +6,18 @@ export const InterfaceContent = styled.div`
   width: 60rem;
   padding: 1rem 1rem 1rem 1rem;
 `
+
+export const Container = styled.div`
+  width: 58rem;
+  height: 68vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  align-items: center;
+  background-color: #f7edf2;
+  border-radius: 8px;
+  margin-top: 2rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  padding-bottom: 1.5rem;
+`;
