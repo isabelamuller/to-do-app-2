@@ -6,7 +6,7 @@ import { ButtonStyle } from "./styles";
 const Button:React.FC<IButton> = ({name}) => {
 
     return(
-        <ButtonStyle>
+        <ButtonStyle type="submit">
             {name}
         </ButtonStyle>
     )
