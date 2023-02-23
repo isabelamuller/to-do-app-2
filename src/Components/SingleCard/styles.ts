@@ -13,13 +13,6 @@ export const CardStyle = styled.div`
   margin-top: 15px;
 `;
 
-
-export const Emoji = styled.span`
-  font-size: 20px;
-  margin-left: 1rem;
-  cursor: pointer;
-  float:right;
-`;
 export const TodoContainer = styled.div`
 max-width: 40rem;
 height:fit-content;

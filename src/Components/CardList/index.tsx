@@ -6,7 +6,7 @@ const CardList: React.FC<ICardList> = ({ todoList }) => {
     return (
         <div>
             {todoList.map(todo => (
-                <Card todo={todo.todo} todoList={todoList} />
+                <Card key={todo.id} todoContent={todo.content} todo={todo} todoList={todoList} />
             ))}
         </div>
     )

@@ -1,6 +1,7 @@
 import { ITodo } from "../../view/types";
 
 export interface CardProps {
-    todo: ITodo["todo"],
-    todoList: ITodo[]
+    todoContent: ITodo["content"],
+    todoList: ITodo[],
+    todo: ITodo
 }

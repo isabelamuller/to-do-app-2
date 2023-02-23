@@ -1,22 +1,31 @@
-import React from "react";
 import { CardProps } from "./types";
-import { CardStyle, Emoji, TodoContainer } from "./styles";
+import { CardStyle, TodoContainer } from "./styles";
+import Emoji from "../Emoji";
+import { ICardList } from "../CardList/types";
 
 
-const Card: React.FC<CardProps> = ({ todo }) => {
+const Card = ({ todoContent, todo }: CardProps, { todoList, setTodoList }: ICardList) => {
+
+    const removeTodo = (id:number) => {
+        console.log("entrou no remove")
+        console.log(todoList)
+        setTodoList(
+           todoList.filter((todo) => todo.id !== id)
+        )
+    }
 
     return (
-            <CardStyle>
+        <CardStyle>
             <TodoContainer>
-            {todo}
+                {todoContent}
             </TodoContainer>
             <div>
-            <Emoji role="img" aria-label="trash-can">🗑</Emoji>
-            <Emoji role="img" aria-label="pencil-and-paper">📝</Emoji>
-            <Emoji role="img" aria-label="done">✅</Emoji>
+                <Emoji name="remove" handleClick={() => removeTodo(todo.id)} />
+                <Emoji name="edit" />
+                <Emoji name="complete" />
             </div>
-            </CardStyle>
-        )
+        </CardStyle>
+    )
 }
 
 export default Card;
