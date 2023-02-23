@@ -9,4 +9,5 @@ height:fit-content;
 font-display: swap;
 font-size: 2.5rem;
 font-family: 'Titan One', cursive;
+user-select: none
 `;

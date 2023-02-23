@@ -9,7 +9,7 @@ const Input: React.FC<IInput> = ({ handleSubmit, todo, setTodo }) => {
         <Container>
             <form onSubmit={handleSubmit}>
                 <InputStyle type="input" placeholder="Enter a task" value={todo} onChange={(e) => setTodo(e.target.value)} />
-                <Button name='Add task' />
+                <Button type="default" name='Add task' />
             </form>
         </Container>
     )

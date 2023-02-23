@@ -1,3 +1,6 @@
 export interface IButton {
-    name:string;
+    name:string,
+    handleClick?: () => void,
+    type?: "clear" | "default"
+
 }
