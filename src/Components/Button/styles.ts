@@ -18,3 +18,9 @@ background-color: #ffdba2;
 transition-duration: 300ms;
 }
 `
+export const ButtonClear = styled(ButtonStyle)`
+margin-top: 15px;
+margin-left:80%;
+font-size: 10px;
+padding: 1rem 1rem 1rem 1rem;
+`
