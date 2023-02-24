@@ -14,14 +14,14 @@ const TodoPage = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    setTodoList([...todoList, { id: Date.now(), content: todo, isFinished: false }])
+    const todoObject =  {id: Date.now(), content: todo, isFinished: false}
+    setTodoList([...todoList,  todoObject ])
     setTodo('')
   }
 
   const clearAllTasks = () => {
     setTodoList([])
   }
-  
   
   return (
     <InterfaceContent>
