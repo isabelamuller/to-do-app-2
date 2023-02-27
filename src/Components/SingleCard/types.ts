@@ -1,6 +1,7 @@
+import { ICardList } from './../CardList/types';
 import { ITodo } from "../../view/types";
 
-export interface CardProps {
-    todo: ITodo["todo"],
-    todoList: ITodo[]
+export interface CardProps extends ICardList {
+    todoContent: ITodo["content"],
+    todo: ITodo
 }

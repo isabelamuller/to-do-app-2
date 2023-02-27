@@ -11,16 +11,17 @@ const TodoPage = () => {
   const [todoList, setTodoList] = useState<ITodo[]>([])
 
 
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    setTodoList([...todoList, { id: Date.now(), todo: todo, isFinished: false }])
+    const todoObject =  {id: Date.now(), content: todo, isFinished: false}
+    setTodoList([...todoList,  todoObject ])
     setTodo('')
   }
 
   const clearAllTasks = () => {
     setTodoList([])
   }
-  
   
   return (
     <InterfaceContent>

@@ -1,5 +1,5 @@
 export interface ITodo {
-    todo: string,
+    content: string,
     id: number,
     isFinished: boolean
 }

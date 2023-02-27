@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { ButtonStyle } from "../Components/Button/styles";
 
 export const InterfaceContent = styled.div`
   height: 85vh;

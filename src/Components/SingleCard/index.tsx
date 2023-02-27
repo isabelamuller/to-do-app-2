@@ -1,22 +1,89 @@
-import React from "react";
 import { CardProps } from "./types";
-import { CardStyle, Emoji, TodoContainer } from "./styles";
+import { CardStyle, TodoContainer, CardStyleDone, DoneText, CardContent } from "./styles";
+import Emoji from "../Emoji";
+import React, { useState } from "react";
 
 
-const Card: React.FC<CardProps> = ({ todo }) => {
+
+const Card = ({ todoContent, todo, todoList, setTodoList }: CardProps) => {
+
+    const [edit, setEdit] = useState<boolean>(false)
+    const [editContent, setEditContent] = useState("")
+
+    const removeTodo = (id: number) => {
+        setTodoList(todoList.filter((todo) => todo.id !== id))
+    }
+
+    const completeTodo = (id: number) => {
+        setTodoList(
+            todoList.map((todo) =>
+                todo.id === id ? { ...todo, isFinished: !todo.isFinished } : todo))
+    }
+
+    const editTodo = (e:React.FormEvent, id:number) => {
+        e.preventDefault()
+        setEdit(true)
+        setTodoList(todoList.map((todo) => (
+            todo.id === id ? { ...todo, content: editContent } : todo
+        )))
+        setEdit(false)
+    }
 
     return (
-            <CardStyle>
-            <TodoContainer>
-            {todo}
-            </TodoContainer>
-            <div>
-            <Emoji role="img" aria-label="trash-can">🗑</Emoji>
-            <Emoji role="img" aria-label="pencil-and-paper">📝</Emoji>
-            <Emoji role="img" aria-label="done">✅</Emoji>
-            </div>
-            </CardStyle>
+        todo.isFinished ? (
+            <>
+                <CardStyleDone>
+                    <DoneText>
+                        done!
+                    </DoneText>
+                    <CardContent>
+                        <TodoContainer >
+                            {todoContent}
+                        </TodoContainer>
+                        <div>
+                            <Emoji name="remove" handleClick={() => removeTodo(todo.id)} />
+                            <Emoji name="edit" handleClick={() => setEdit(true)}/>
+                            <Emoji name="complete" handleClick={() => completeTodo(todo.id)} />
+                            <Emoji name="completed" />
+                        </div>
+
+                    </CardContent>
+                </CardStyleDone>
+            </>
         )
+            : edit ?
+            (
+                <CardStyle>
+                <CardContent>
+                    <TodoContainer >
+                        <form onSubmit={(e) => editTodo(e, todo.id)}>
+                        <input type="input" value={editContent} onChange={(e) => setEditContent(e.target.value)}/>
+                        </form>
+                    </TodoContainer>
+                    <div>
+                        <Emoji name="remove" handleClick={() => removeTodo(todo.id)} />
+                        <Emoji name="edit" handleClick={() => setEdit(false)} />
+                        <Emoji name="complete" handleClick={() => completeTodo(todo.id)} />
+                    </div>
+                </CardContent>
+            </CardStyle>
+            ) : (
+                (
+                    <CardStyle>
+                        <CardContent>
+                            <TodoContainer >
+                                {todoContent}
+                            </TodoContainer>
+                            <div>
+                                <Emoji name="remove" handleClick={() => removeTodo(todo.id)} />
+                                <Emoji name="edit" handleClick={() => setEdit(true)} />
+                                <Emoji name="complete" handleClick={() => completeTodo(todo.id)} />
+                            </div>
+                        </CardContent>
+                    </CardStyle>
+            )
+            )
+    )
 }
 
 export default Card;
