@@ -27,5 +27,5 @@ export const TextBeforeRendering = styled.h1`
   font-weight: 200;
   cursor: default;
   user-select: none;
-  margin-top: 22rem;
+  margin-top: 25rem;
 `;

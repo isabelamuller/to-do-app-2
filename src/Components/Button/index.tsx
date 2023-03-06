@@ -1,6 +1,6 @@
 import React from "react";
 import { IButton } from "./types";
-import { ButtonStyle, ButtonClear } from "./styles";
+import { ButtonStyle, ButtonClear, ButtonFilter } from "./styles";
 
 
 const Button = ({ name, handleClick, type }: IButton) => {
@@ -12,13 +12,19 @@ const Button = ({ name, handleClick, type }: IButton) => {
                         {name}
                     </ButtonClear>
                 )
+            case "filter":
+                return (
+                    <ButtonFilter onClick={handleClick}>
+                        {name}
+                    </ButtonFilter>
+                )
             case "default":
-                default:
+            default:
                 return (
                     <ButtonStyle onClick={handleClick} >
                         {name}
                     </ButtonStyle>
-                    
+
                 )
         }
     }

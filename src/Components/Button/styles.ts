@@ -14,13 +14,34 @@ export const ButtonStyle = styled.button`
   transition-property: background-color;
   transition-duration: 300ms;
   &:hover {
-    background-color: #ffdba2;
+    background-color: #facdd4;
     transition-duration: 300ms;
+    color:#ef7c8e;
   }
 `;
 export const ButtonClear = styled(ButtonStyle)`
-  margin-top: 15px;
-  margin-left: 80%;
+  margin-left: 11px;
+  height:12px;
   font-size: 10px;
+  display:flex;
+  align-items:center;
   padding: 1rem 1rem 1rem 1rem;
+`;
+export const ButtonFilter = styled(ButtonStyle)`
+  margin-top: 0;
+  margin-left: 11px;
+  display:flex;
+  align-items:center;
+  height:12px;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: .3px;
+  background-color: #facdd4;
+  transition-duration: 300ms;
+  color:#ef7c8e;
+  &:hover {
+    background-color: #ef7c8e;
+    color:white;
+    transition-duration: 300ms;
+  }
 `;
