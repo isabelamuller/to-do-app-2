@@ -11,7 +11,7 @@ export const DropdownList = styled.ul`
   border-radius: 5px;
   margin: 0;
   background-color: #ef7c8e;
-  font-size: 11px;
+  font-size: 1rem;
   position: absolute;
   margin-left: 13rem;
   font-family: "Poppins", sans-serif;
@@ -24,8 +24,8 @@ export const ListItem = styled.li`
   cursor:pointer;
 `;
 export const ButtonDots = styled.div`
-  margin-top: -10px;
-  margin-right: -15px;
+  margin-top: -.7rem;
+  margin-right: -.9rem;
 `;
 
 

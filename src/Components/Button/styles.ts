@@ -20,20 +20,20 @@ export const ButtonStyle = styled.button`
   }
 `;
 export const ButtonClear = styled(ButtonStyle)`
-  margin-left: 11px;
+  margin-left: .9em;
   height:12px;
-  font-size: 10px;
+  font-size: .8rem;
   display:flex;
   align-items:center;
   padding: 1rem 1rem 1rem 1rem;
 `;
 export const ButtonFilter = styled(ButtonStyle)`
   margin-top: 0;
-  margin-left: 11px;
+  margin-left: .9em;
   display:flex;
   align-items:center;
   height:12px;
-  font-size: 10px;
+  font-size: .8rem;
   font-weight: 500;
   letter-spacing: .3px;
   background-color: #facdd4;

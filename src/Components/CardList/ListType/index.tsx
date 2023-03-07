@@ -1,5 +1,6 @@
 import { IList } from "./types"
 import Card from "../../SingleCard"
+import { ListStyle } from "./styles"
 
 const List = ({ type, todoList, setTodoList, completedTodos, setCompletedTodos, nonCompletedTodos, setNonCompletedTodos }: IList) => {
     const getList = () => {
@@ -7,27 +8,27 @@ const List = ({ type, todoList, setTodoList, completedTodos, setCompletedTodos, 
             case "allTasks":
             default:
                 return (
-                    <div>
+                    <ListStyle>
                         {todoList.map(todo => (
                             <Card nonCompletedTodos={nonCompletedTodos} setNonCompletedTodos={setNonCompletedTodos} completedTodos={completedTodos} setCompletedTodos={setCompletedTodos} key={todo.id} todoContent={todo.content} todo={todo} todoList={todoList} setTodoList={setTodoList} />
                         ))}
-                    </div>
+                    </ListStyle>
                 )
             case "completed":
                 return (
-                    <div>
+                    <ListStyle>
                         {completedTodos.map(todo => (
                             <Card nonCompletedTodos={nonCompletedTodos} setNonCompletedTodos={setNonCompletedTodos} completedTodos={completedTodos} setCompletedTodos={setCompletedTodos} key={todo.id} todoContent={todo.content} todo={todo} todoList={todoList} setTodoList={setTodoList} />
                         ))}
-                    </div>
+                    </ListStyle>
                 )
             case "nonCompleted":
                 return (
-                    <div>
+                    <ListStyle>
                         {nonCompletedTodos.map(todo => (
                             <Card nonCompletedTodos={nonCompletedTodos} setNonCompletedTodos={setNonCompletedTodos} completedTodos={completedTodos} setCompletedTodos={setCompletedTodos} key={todo.id} todoContent={todo.content} todo={todo} todoList={todoList} setTodoList={setTodoList} />
                         ))}
-                    </div>
+                    </ListStyle>
                 )
         }
     }

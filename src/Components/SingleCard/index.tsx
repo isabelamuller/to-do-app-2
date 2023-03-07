@@ -32,12 +32,14 @@ const Card = ({ todoContent, todo, todoList, setTodoList }: CardProps) => {
 
     return (
         todo.isFinished ? (
-            <>
+            <li>
                 <CardStyleDone>
                     <DoneText>
                         done!
                     </DoneText>
+                    <div>
                     <OptionsMenu date={todo.date} />
+                    </div>
                     <CardContent>
                         <TodoContainer >
                             {todoContent}
@@ -52,10 +54,11 @@ const Card = ({ todoContent, todo, todoList, setTodoList }: CardProps) => {
 
                     </CardContent>
                 </CardStyleDone>
-            </>
+            </li>
         )
             : edit ?
                 (
+                    <li>
                     <CardStyle>
                         <CardContent>
                             <TodoContainer >
@@ -70,8 +73,10 @@ const Card = ({ todoContent, todo, todoList, setTodoList }: CardProps) => {
                             </EmojiContainer>
                         </CardContent>
                     </CardStyle>
+                    </li>
                 ) : (
                     (
+                        <li>
                         <CardStyle>
                                 <OptionsMenu date={todo.date} />
                             <CardContent>
@@ -85,6 +90,7 @@ const Card = ({ todoContent, todo, todoList, setTodoList }: CardProps) => {
                                 </EmojiContainer>
                             </CardContent>
                         </CardStyle>
+                        </li>
                     )
                 )
     )
