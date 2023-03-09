@@ -41,7 +41,7 @@ const CardList = ({ todoList, setTodoList, completedTodos, setCompletedTodos, no
                 </FilterTitle>
                 <Button type="filter" name="All" handleClick={showAllTasks} />
                 <Button type="filter" name="Completed" handleClick={showCompletedTasks} />
-                <Button type="filter" name="Non completed" handleClick={showNonCompletedTasks} />
+                <Button type="filter" name="Uncompleted" handleClick={showNonCompletedTasks} />
                 <Button type="clear" name="Clear tasks" handleClick={clearAllTasks} />
             </ButtonContainer>
             {completedTasksShow ? (

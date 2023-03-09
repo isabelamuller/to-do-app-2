@@ -5,7 +5,6 @@ export const ButtonContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 1.5rem;
-
 `;
 
 export const ListContainer = styled.div`

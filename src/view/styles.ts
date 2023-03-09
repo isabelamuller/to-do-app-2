@@ -5,6 +5,10 @@ export const InterfaceContent = styled.div`
   display: block;
   width: 60rem;
   padding: 1rem 1rem 1rem 1rem;
+
+  @media (max-width: 753px) {
+    width: 100vw;
+  }
 `;
 
 export const Container = styled.div`
@@ -20,6 +24,12 @@ export const Container = styled.div`
   margin-right: 1rem;
   margin-left: 1rem;
   padding-bottom: 1.5rem;
+
+  @media (max-width: 753px) {
+    width: 97vw;
+    margin-left: 1rem;
+    margin-right: 0;
+  }
 `;
 export const TextBeforeRendering = styled.h1`
   font-size: 2rem;
@@ -28,4 +38,8 @@ export const TextBeforeRendering = styled.h1`
   cursor: default;
   user-select: none;
   margin-top: 25rem;
+  
+  @media (max-width: 463px) {
+    font-size: 1.5rem;
+  }
 `;

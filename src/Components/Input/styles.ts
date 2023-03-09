@@ -11,6 +11,16 @@ import styled from "styled-components";
         font-size: 1.1rem;
         outline: none;
         font-family: 'Poppins', sans-serif;
+        
+        @media (max-width: 688px) {
+        min-width: 30rem;
+        }
+        @media (max-width: 538px) {
+        min-width: 20rem;
+        }
+        @media (max-width: 342px) {
+        min-width: 15rem;
+        }    
     `
 
     export const Container = styled.div `
